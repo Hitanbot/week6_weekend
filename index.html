@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cool Dinosaur app thing</title>
+    <script src="js/app.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+  </head>
+  <body>
+    <form id="new-item-form">
+      <div id="form-wrapper">
+        <div class="form-item">
+          <label for="species" class="primary">Species</label>
+          <input type="text" id="species" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="survival" class="primary">Survival Tactic</label>
+          <input type="text" id="survival" required/>
+        </div>
+
+        <div class="form-item">
+          <label for="diet" class="primary">Diet</label>
+          <select id="diet">
+            <option value="" disabled selected></option>
+            <option value="Herbivore">Herbivore</option>
+            <option value="Carnivore">Carnivore</option>
+            <option value="Omnivore">Omnivore</option>
+          </select>
+        </div>
+
+        <div class="form-item">
+          <p>What size would they be compared to a human?</p>
+          <input type="radio" id="smaller" name="size" value="small">
+          <label for="smaller">Smaller</label><br>
+          <input type="radio" id="similar" name="size" value="medium">
+          <label for="similar">Similar</label><br>
+          <input type="radio" id="larger" name="size" value="large">
+          <label for="larger">Larger</label>
+          <input type="radio" id="huge" name='size' value='huge'>
+          <label for="huge">Way Bigger</label>
+        </div>
+
+      </div>
+      <input type="submit" value="Save"/>
+    </form>
+
+    <button id="delete-all">Delete All</button>
+
+    <h1>Dinosaur list</h1>
+    <ul id="dinosaur-list"></ul>
+  </body>
+</html>
